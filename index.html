@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lumina — Sua amiga que te ajuda a se sentir bem 🌟</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+  <!-- Botão de trocar perfil -->
+  <button class="btn-trocar-perfil" onclick="trocarPerfil()">🔄 Trocar perfil</button>
+
+  <!-- Tela de escolha inicial -->
+  <div id="inicio-escolha" class="inicio-escolha">
+    <div class="container text-center"
+      style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100%;">
+      <div class="lumina-img"><img src="assets/img/Designer.png" alt="Mascote Lumina"></div>
+      <h1 class="titulo-lumina">Oi! Eu sou a Lumina!</h1>
+      <p class="subtitulo-lumina">Com quem eu vou brincar hoje?</p>
+      <div class="cards-container">
+        <div class="card-crianca p-4" onclick="escolher('crianca')">
+          <div class="mb-3"><span class="fs-1">👧👦</span></div>
+          <h3 class="text-white fw-bold">Quero aprender!</h3>
+          <p class="text-white mt-2 opacity-90">
+            Quero brincar, aprender sobre meus sentimentos e descobrir o que me deixa seguro(a)!
+          </p>
+          <div class="estrelas"><span>✨</span><span>🌟</span><span>💫</span></div>
+        </div>
+
+        <div class="card-jogos p-4" onclick="escolher('jogos')">
+          <div class="mb-3"><span class="fs-1">🎮📚</span></div>
+          <h3 class="text-white fw-bold">Quero brincar!</h3>
+          <p class="text-white mt-2 opacity-90">
+            Vamos jogar, ouvir histórias e aprender brincando com a Lumina!
+          </p>
+          <div class="estrelas-jogos">
+            <span>✨</span><span>🌟</span><span>💫</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <section class="hero py-5 text-center" id="inicio">
+    <h1 class="fw-bold">Oi! Eu sou a Lumina 🌟</h1>
+    <p class="lead px-3">Sou sua amiga e quero te ajudar a se sentir bem, seguro e confiante.</p>
+  </section>
+
+  <section class="container my-5" id="index-crianca">
+    <h2 class="text-center mb-4">🌈 O mundo da Lumina — um lugar seguro para você!</h2>
+    <div class="row g-4 justify-content-center">
+      <div class="col-md-4">
+        <div class="card h-100 p-3 text-center">
+          <h5>Meus Sentimentos</h5>
+          <p>Clique no rostinho...</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100 p-3 text-center">
+          <h5>Meu Corpo é Meu!</h5>
+          <p>Aprenda o que é...</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card h-100 p-3 text-center">
+          <h5>Histórias da Lumina</h5>
+          <p>Ouça contos...</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container my-5" id="index-adulto">
+    <h2 class="text-center mb-4">💛 Você cuida de crianças? A Lumina também quer te ajudar!</h2>
+    <div class="row g-4">
+      <div class="col-md-6">
+        <div class="card p-3 h-100">
+          <h5>Guias Rápidos</h5>
+          <ul class="mt-2">
+            <li>Como conversar sobre abuso sem assustar</li>
+            <li>Sinais de alerta emocionais</li>
+            <li>Frases que acolhem</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card p-3 h-100">
+          <h5>Recursos para Baixar</h5>
+          <p>Plano de aula, cartilha para pais...</p>
+          <a href="#" class="btn btn-sm btn-primary mt-2">📥 Baixar kit gratuito</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container my-5" id="ajuda">
+    <h2 class="text-center">Preciso de ajuda</h2>
+    <p class="text-center mb-4">Se você ou alguém que conhece está em perigo, procure ajuda agora.</p>
+    <div class="row justify-content-center text-center">
+      <div class="col-md-4 mb-3">
+        <div class="p-4 rounded shadow-sm" style="background-color:#6a5acd;color:white;">
+          <h4>📞 100</h4>
+          <p>Direitos Humanos</p>
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <div class="p-4 rounded shadow-sm" style="background-color:#ffcc00;color:black;">
+          <h4>🚓 190</h4>
+          <p>Emergência</p>
+        </div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <div class="p-4 rounded shadow-sm" style="background-color:#b19cd9;color:white;">
+          <h4>🛡️ Conselho Tutelar</h4>
+          <p>Procure o da sua cidade</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="py-4 text-center text-muted">
+    <p>🌟 Lumina — Sua amiga que te ajuda a se sentir bem</p>
+    <p class="mb-0">© 2025 Lumina — Feito com carinho para o bem-estar das crianças</p>
+  </footer>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    function escolher(tipo) {
+      if (tipo === 'crianca') {
+        window.location.href = 'crianca/index-crianca.html';
+      } else if (tipo === 'jogos') {
+        window.location.href = 'crianca/jogos.html';
+      }
+    }
+  </script>
+</body>
+
+
+</html>

@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lumina — Para Crianças 🌈</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+    <link rel="stylesheet" href="crianca-estilo.css">
+    <div class="container">
+      <a class="navbar-brand" href="../index.html">🌟 Lumina</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#sentimentos">Sentimentos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#corpo">Meu Corpo</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="jogos-historias/jogos.html">Jogos</a></li>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#ajuda">Ajuda</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html">Trocar perfil</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<body>
+  <!-- Botão para voltar -->
+  <!-- Hero principal -->
+  <section class="text-center py-5">
+    <div class="container">
+      <!-- Abelha Lumina -->
+      <div class="mb-4">
+        <div class="lumina-img"><img src="../assets/img/Designer.png" alt="Mascote Lumina"></div>
+      </div>
+
+      <!-- Frase curta e carinhosa -->
+      <h1 class="display-6 fw-bold mb-3">Oi, amiguinho(a)! Eu sou a <span class="text-warning">Lumina</span>.</h1>
+
+      <!-- Mensagem única, em destaque -->
+      <div class="bg-white p-3 rounded-4 d-inline-block shadow-sm" style="max-width: 320px;">
+        <p class="mb-0 fst-italic" style="color: #5e4a00; font-size: 1.1rem;">
+          “Quando você se sente seguro, seu brilho ilumina o mundo!”
+        </p>
+      </div>
+
+      <!-- Botões lado a lado -->
+      <div class="mt-5 d-flex flex-column flex-md-row justify-content-center gap-3">
+        <a href="#sentimentos" class="btn btn-lg"
+          style="background: #FFD166; color: #5e4a00; border-radius: 24px; width: 200px; font-weight: 600;">
+          😊 Sentimentos
+        </a>
+        <a href="#corpo" class="btn btn-lg"
+          style="background: #A8E6CF; color: #2d5d2d; border-radius: 24px; width: 200px; font-weight: 600;">
+          🛡️ Meu Corpo
+        </a>
+        <a href="jogos-historias/jogos.html" class="btn btn-lg"
+          style="background: #FF9AA2; color: #5e2a3d; border-radius: 24px; width: 200px; font-weight: 600;">
+          🎮 Jogos
+        </a>
+      </div>
+    </div>
+  </section>
+  <!-- Introdução lúdica -->
+  <div class="container text-center mb-5">
+    <div class="bg-light p-4 rounded-4 d-inline-block" style="max-width: 550px;">
+      <p class="mb-3" style="font-size: 1.1rem;">
+        🌈 Neste cantinho especial, você pode:
+      </p>
+      <ul class="text-start" style="padding-left: 1.5rem; margin: 0;">
+        <li>Descobrir como se sente hoje (<strong>feliz</strong>? <strong>triste</strong>? <strong>com medo</strong>?)
+        </li>
+        <li>Aprender que seu corpo é seu <strong>castelo</strong> 🏰</li>
+        <li>Ouvir histórias que ensinam sobre <strong>respeito</strong> e <strong>coragem</strong></li>
+        <li>Saber que sempre há alguém para te <strong>ajudar</strong> 💛</li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    function mostrarMensagem(sentimento) {
+      const mensagens = {
+        feliz: "Que alegria ver você feliz! 😊 Dança, canta ou compartilha essa felicidade com alguém!",
+        triste: "Tudo bem se sentir triste às vezes. 💙 A Lumina está aqui com você. Quer um abraço virtual?",
+        bravo: "Raiva é normal! Mas respire fundo... 1... 2... 3... Agora, conte o que te deixou assim.",
+        medo: "Medo é um amigo que avisa: 'cuidado!'. Você não está sozinho(a). A Lumina te protege! 🌟"
+      };
+
+      document.getElementById('texto-mensagem').textContent = mensagens[sentimento];
+      document.getElementById('mensagem-lumina').style.display = 'block';
+
+      // Rolar suavemente até a mensagem
+      document.getElementById('mensagem-lumina').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+
+  </script>
+  <script>
+    function mostrarPessoaConfianca() {
+      const div = document.getElementById('pessoas-confianca');
+      if (div.style.display === 'none' || div.style.display === '') {
+        div.style.display = 'block';
+      } else {
+        div.style.display = 'none';
+      }
+    }
+  </script>
+
+</body>
+
+<!-- Seção: Meus Sentimentos -->
+<section id="sentimentos" class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">💖 Meus Sentimentos</h2>
+    <p class="text-center lead mb-5">
+      Todos os sentimentos são bem-vindos aqui! A Lumina quer saber como você está se sentindo hoje.
+    </p>
+
+    <!-- Cartões de sentimentos interativos -->
+    <div class="row g-4 justify-content-center">
+
+      <!-- Feliz -->
+      <div class="col-md-3 text-center">
+        <div class="card-sentimento card-feliz p-4 rounded-4" onclick="mostrarMensagem('feliz')">
+          <div class="emoji fs-1 mb-3">😊</div>
+          <h4>Feliz</h4>
+        </div>
+      </div>
+
+      <!-- Triste -->
+      <div class="col-md-3 text-center">
+        <div class="card-sentimento card-triste p-4 rounded-4" onclick="mostrarMensagem('triste')">
+          <div class="emoji fs-1 mb-3">😢</div>
+          <h4>Triste</h4>
+        </div>
+      </div>
+
+      <!-- Bravo -->
+      <div class="col-md-3 text-center">
+        <div class="card-sentimento card-bravo p-4 rounded-4" onclick="mostrarMensagem('bravo')">
+          <div class="emoji fs-1 mb-3">😡</div>
+          <h4>Bravo</h4>
+        </div>
+      </div>
+
+      <!-- Com medo -->
+      <div class="col-md-3 text-center">
+        <div class="card-sentimento card-medo p-4 rounded-4" onclick="mostrarMensagem('medo')">
+          <div class="emoji fs-1 mb-3">😨</div>
+          <h4>Com medo</h4>
+        </div>
+      </div>
+    </div>
+
+    <!-- Caixa de mensagem da Lumina -->
+    <div id="mensagem-lumina" class="mt-5 text-center px-3" style="min-height: 80px; display: none;">
+      <div class="bg-light p-4 rounded-4 d-inline-block">
+        <p class="mb-0" id="texto-mensagem"></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Seção: Meu Corpo é Meu! -->
+<section id="corpo" class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">🛡️ Meu Corpo é Meu!</h2>
+    <p class="text-center lead mb-5">
+      Meu corpo é meu castelo! 💖 Só eu decido quem pode tocar, abraçar ou dar beijo.
+    </p>
+
+    <div class="row g-4 align-items-center">
+      <!-- Ilustração (substitua pelo caminho real da imagem) -->
+      <div class="col-md-6 text-center">
+        <div class="bg-white p-3 rounded-4 shadow-sm d-inline-block">
+          <img src="../assets/img/corpo-ilustrado.png.jpg" alt="Desenho de uma criança com roupas coloridas"
+            class="img-fluid" style="max-width: 580px;">
+          <p class="mt-2 text-muted"><small>Minhas roupas cobrem as partes privadas. Ninguém deve tocar ali sem
+              permissão!</small></p>
+        </div>
+      </div>
+
+      <!-- Conteúdo interativo -->
+      <div class="col-md-6">
+        <div class="bg-light p-4 rounded-4">
+          <h4 class="mb-3">✨ Regras do Castelo do Corpo:</h4>
+          <ul class="text-start">
+            <li><strong>Eu posso dizer “NÃO”</strong> — mesmo para um adulto!</li>
+            <li><strong>Toques seguros</strong>: médico com mamãe/papai, abraço de quem eu gosto.</li>
+            <li><strong>Toques não seguros</strong>: quando alguém toca onde minha roupa cobre, me faz sentir vergonha
+              ou medo.</li>
+            <li><strong>Se algo me deixar triste ou com medo, eu conto</strong> para alguém de confiança!</li>
+          </ul>
+
+          <div class="mt-4">
+            <button class="btn btn-outline-primary" onclick="mostrarPessoaConfianca()">
+              👂 Quem são as pessoas de confiança?
+            </button>
+          </div>
+
+          <div id="pessoas-confianca" class="mt-3" style="display: none;">
+            <p class="mb-0">
+              <strong>Exemplos:</strong> mamãe, papai, professora, tia, avó, conselheiro(a) escolar...
+            </p>
+            <p class="mb-0">
+              <strong>Lembre-se:</strong> você pode contar até mesmo se disserem “é segredo”!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Botão de emergência (acolhedor, não assustador) -->
+    <div class="text-center mt-5">
+      <div class="bg-white p-3 rounded-4 d-inline-block border border-warning">
+        <p class="mb-1">🌟 <strong>Se você estiver em perigo agora:</strong></p>
+        <p class="mb-0">Ligue para o <strong>Disque 100</strong> — é grátis e anônimo!</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<div class="text-center mt-5">
+  <a href="../index.html" class="btn btn-outline-secondary">← Voltar à tela inicial</a>
+</div>
+</div>
+
+<footer class="bg-light py-4 mt-5">
+  <div class="container text-center">
+    <p class="mb-0">&copy; 2026 Lumina. Todos os direitos reservados.</p>
+  </div>
+
+</html>
