@@ -26,8 +26,7 @@ header {
   position: sticky;
   top: 0;
   width: 100%;
-  z-index: 1050;
-  /* Bootstrap z-index para navbar */
+  z-index: 2;
 }
 
 nav {
